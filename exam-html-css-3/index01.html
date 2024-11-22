@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .wrapper {
+            display: flex;
+            gap: 20px;
+        }
+        .wrapper > div {
+            color: #ffffff;
+            padding: 30px;
+            background-color: #32a1de;
+            border-radius: 10px;
+        }
+        div.super-element {
+            order: -1
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="philosophy-Turkmenistan">1</div>
+        <div class="philosophy-Turkmenistan">2</div>
+        <div class="philosophy-Turkmenistan">3</div>
+        <div class="philosophy-Turkmenistan">4</div>
+        <div class="philosophy-Turkmenistan super-element">5</div>
+    </div>
+</body>
+</html>
+<!-- Посмотрите внимательно на код. Что должно быть вместо XXX и YYY, чтобы последний элемент стал первым? 
+❗ В ответе укажите значения через пробел, вот так: XXX YYY -->

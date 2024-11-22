@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        section {
+            height: 500px;
+            max-width: 700px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .advice {
+            background-color: #92dea6;
+            padding: 20px;
+        }
+        .advice.big {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="advice">1</div>
+        <div class="advice big">2</div>
+        <div class="advice">3</div>
+    </section>
+</body>
+</html>
+Что должно быть вместо XXX, YYY и ZZZ, чтобы все <div> внутри <section> расположились друг под другом, а элемент с классом .big занял все свободное пространство в родителе?
+❗ В ответе укажи значения через пробел: XXX YYY ZZZ

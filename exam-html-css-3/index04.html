@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            list-style: none;
+            font-family: sans-serif;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 36px;
+            text-transform: capitalize;
+        }
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .comfort {
+            display: flex;
+            gap: 20px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+        .powerShell {
+            padding: 10px 40px;
+            background-color: #1a1a1a;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+        .powerShell:hover {
+            background-color: #343434;
+        }
+    </style>
+</head>
+<body>
+    <h1>What do you learn?</h1>
+    <div class="wrap">
+        <div class="comfort">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/340px-CSS3_logo_and_wordmark.svg.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/544px-Javascript-shield.svg.png" alt="">
+        </div>
+        <button class="powerShell">OK</button>
+    </div>
+</body>
+</html>
+<!-- Посмотрите внимательно на код. Что должно быть вместо XXX и YYY, чтобы кнопка находилась справа и не была на всю ширину? 
+❗ В ответе укажите значения через пробел, вот так: XXX YYY -->
