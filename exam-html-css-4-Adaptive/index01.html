@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #dfe3e8;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+        }
+        
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .education	{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 95%;
+            margin: 50px auto;
+
+        }
+        .hope {
+            background-color: #638ae5;
+            height: 100px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        @media (XXX: 576px) {
+            .hope {
+                width: 100%;
+            }
+        }
+        @media (YYY: 576px) and (XXX: 768px) {
+            .hope {
+                width: 49%;
+            }
+        }
+        @media (YYY: 768px) and (XXX: 1200px) {
+            .hope {
+                width: 32%;
+            }
+        }
+        @media (YYY: 1200px) {
+            .hope {
+                width: 24%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="education">
+            <div class="hope">1</div>
+            <div class="hope">2</div>
+            <div class="hope">3</div>
+            <div class="hope">4</div>
+            <div class="hope">5</div>
+            <div class="hope">6</div>
+            <div class="hope">7</div>
+            <div class="hope">8</div>
+            <div class="hope">9</div>
+            <div class="hope">10</div>
+            <div class="hope">11</div>
+            <div class="hope">12</div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+<!-- Что должно быть вместо XXX и YYY, чтобы при уменьшении экрана было сначала четыре элемента в ряд, потом три, потом два, а потом один элемент в ряд.
+❗ В ответе укажите значения через пробел, вот так: XXX YYY -->
