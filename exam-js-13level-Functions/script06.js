@@ -1,31 +1,19 @@
 //Вопрос:
 
-//Перед вами форма для добавления задач в список.
+//orderFood - функция имитирующая процесс приготовления еды, который занимает некоторое время (1 секунду🙂).
 
-//Что нужно написать вместо XXX, чтобы новая задача добавлялась в НАЧАЛО списка?
+//Что нужно написать вместо XXX, чтобы через 1 секунду после выполнения данного кода, в консоли отобразилось: “Доставляю ризотто прямо к вашему столу!”
 
 
 
-document.body.innerHTML = `
-  <form>
-    <input type="text" id="task-input" placeholder="Введите задачу">
-    <button type="submit">Добавить задачу!</button>
-  </form>
-  <ul id="task-container"></ul>
-`
-const form = document.querySelector('form')
-const taskContainer = document.getElementById('task-container')
-const input = document.getElementById('task-input')
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
-  const taskText = input.value.trim()
-  if (taskText) {
-    const task = document.createElement('li')
-    task.textContent = taskText
+function orderFood(dish, callback) {
+  console.log(`Начинаю готовить ${dish}...`)
+  setTimeout(() => {
+    console.log(`${dish} готово!`)
     XXX
-    input.value = ''
-    input.focus()
-  } else {
-    alert('Пожалуйста, введите текст задачи!')
-  }
-})
+  }, 1000); // Готовим еду 1 секунду
+}
+function deliverFood(dish) {
+  console.log(`Доставляю ${dish} прямо к вашему столу!`)
+}
+orderFood("ризотто", deliverFood)

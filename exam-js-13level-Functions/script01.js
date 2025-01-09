@@ -1,21 +1,23 @@
 //Вопрос:
 
-//Что необходимо написать вместо ХХХ, чтобы предотвратить перезагрузку страницу, возникающую при отправке формы?
+//Что необходимо написать вместо XXX, чтобы остортировать массив фильмов по рейтингу в порядку убыванания?
 
 
 
-document.body.innerHTML = `
-  <form>
-    <label>
-      City:
-      <input type="text" name="city" />
-    </label>
-      <button>Submit</button>
-  </form>
-`
-const form = document.querySelector('form')
-form.addEventListener('submit', function (event) {
-  XXX
-  const city = event.target.city.value
-  console.log(city)
+const movies = [
+  { title: "Назад в будущее", rating: 8.5 },
+  { title: "Начало", rating: 8.8 },
+  { title: "Матрица", rating: 8.8 },
+  { title: "Паразиты", rating: 8.6 },
+  { title: "Тёмный рыцарь", rating: 9.0 }
+]
+const sortedMovies = movies.sort((a, b) => {
+  if (XXX) {
+    return 1
+  } else if (a.rating === b.rating) {
+    return 0
+  } else {
+    return -1
+  }
 })
+console.log("Фильмы, отсортированные по рейтингу:", sortedMovies)

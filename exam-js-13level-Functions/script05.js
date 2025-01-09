@@ -1,27 +1,21 @@
 //Вопрос:
 
-//Что надо написать вместо XXX, чтобы отменить таймер, который устанавливается при нажатии на кнопку "Показать сообщение через 3 секунды"?
+//Что надо написать вместо XXX, чтобы создать новый массив на основе массива scientists?
 
 
 
-document.body.innerHTML = `
-  <button id="start-button">Показать сообщение через 3 секунды</button>
-  <button id="cancel-button">Отменить показ сообщения</button>
-  <div id="message-output"></div>
-`
-const startButton = document.getElementById('start-button')
-const cancelButton = document.getElementById('cancel-button')
-const messageOutput = document.getElementById('message-output')
-let timerId
-startButton.addEventListener('click', () => {
-  messageOutput.textContent =
-    'Сообщение появится через 3 секунды...'
-  timerId = setTimeout(() => {
-    messageOutput.textContent = 'Вот и сообщение!'
-  }, 3000)
+const scientists = [
+  { firstName: "Альберт", lastName: "Эйнштейн", years: "1879-1955", mainWork: "Теория относительности" },
+  { firstName: "Исаак", lastName: "Ньютон", years: "1643-1727", mainWork: "Классическая механика" },
+  { firstName: "Мария", lastName: "Кюри", years: "1867-1934", mainWork: "Исследование радиоактивности" },
+  { firstName: "Галилео", lastName: "Галилей", years: "1564-1642", mainWork: "Совершенствование телескопа" }
+]
+// Преобразуем список ученых в массив с объединенными именами
+const scientistProfiles = scientists.XXX(scientist => {
+  return {
+    name: `${scientist.firstName} ${scientist.lastName}`,
+    years: scientist.years,
+    mainWork: scientist.mainWork
+  }
 })
-cancelButton.addEventListener('click', () => {
-  XXX
-  messageOutput.textContent =
-    'Показ сообщения отменён.'
-})
+console.log("Профили ученых:", scientistProfiles)

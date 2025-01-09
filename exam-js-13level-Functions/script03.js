@@ -1,16 +1,12 @@
 //Вопрос:
 
-//Что необходимо написать вместо XXX, тобы при нажатии на кнопку происходило переключение класса .dark на контейнере? Класс .dark должен удаляться, если от присутствует, иначе класс .dark должен добавляться.
+//Напиши одну строку кода вместо XXX, чтобы в переменной squaredNumber хранился массив квадратов чисел из массива numbers?
 
 
 
-document.body.innerHTML = `
-  <div class="container dark">
-    <button>toggle color schema</button>
-  </div>
-`
-const container = document.querySelector('.container')
-const button = document.querySelector('button')
-button.addEventListener('click', () => {
+const numbers = [1, 2, 3, 4, 5]
+// Преобразуем массив чисел в массив их квадратов
+const squaredNumbers = numbers.map(number => {
   XXX
 })
+console.log("Квадраты чисел:", squaredNumbers) // Должны получить [1, 4, 9, 16, 25]

@@ -1,19 +1,17 @@
 //Вопрос:
 
-//Что нужно написать вместо XXX, чтобы при клике на кнопку создавался новый HTML-элемент <span> (который будет содержать случайного питомца)?
+//Напиши строку кода вместо XXX, чтобы получить массив всех книг жанра "фэнтези"?
 
 
 
-document.body.innerHTML = `
-  <button id="addPetButton">Добавь питомца!</button>
-  <div id="petContainer"></div>
-`;
-const pets = ["🐶", "🐱", "🐹", "🐰", "🦜", "🐢", "🐟", "🐸", "🦇", "🕷", "🦔", "🐺"]
-const petContainer = document.getElementById("petContainer")
-document.getElementById("addPetButton").addEventListener('click', () => {
-  const pet = XXX
-  pet.textContent = pets[Math.floor(Math.random() * pets.length)]
-  pet.style.fontSize = '2rem'
-  pet.style.margin = '5px'
-  petContainer.append(pet)
+const library = [
+  { title: "Убийство в Восточном экспрессе", author: "Агата Кристи", genre: "детектив" },
+  { title: "Ведьмак", author: "Анджей Сапковский", genre: "фэнтези" },
+  { title: "Научное мышление", author: "Карл Поппер", genre: "наука" },
+  { title: "Властелин колец", author: "Дж. Р. Р. Толкиен", genre: "фэнтези" },
+  { title: "1984", author: "Джордж Оруэлл", genre: "дистопия" }
+];
+const fantasyBooks = library.filter((book) => {
+  XXX
 })
+console.log("Фэнтезийные книги в библиотеке:", fantasyBooks)
