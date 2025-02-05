@@ -1,20 +1,69 @@
 //Вопрос:
-//Что необходимо написать вместо XXX, чтобы остортировать массив фильмов по рейтингу в порядку убыванания?
 
-const movies = [
-  { title: "Назад в будущее", rating: 8.5 },
-  { title: "Начало", rating: 8.8 },
-  { title: "Матрица", rating: 8.8 },
-  { title: "Паразиты", rating: 8.6 },
-  { title: "Тёмный рыцарь", rating: 9.0 }
-]
-const sortedMovies = movies.sort((a, b) => {
-  if (XXX) {
-    return 1
-  } else if (a.rating === b.rating) {
-    return 0
-  } else {
-    return -1
-  }
-})
-console.log("Фильмы, отсортированные по рейтингу:", sortedMovies)
+//Что необходимо написать вместо XXX, чтобы в приложении заработало добавление книг в список?
+
+
+
+document.body.innerHTML = `
+  <form id="add-book-form">
+    <input type="text" id="book-title" placeholder="Название книги">
+    <input type="text" id="book-author" placeholder="Автор">
+    <button type="submit">Добавить книгу</button>
+  </form>
+  <ul id="books-list"></ul>
+`
+const model = {
+  books: [],
+  addBook(title, author) {
+    this.books.push({ title, author, id: Math.random() })
+    view.render(this.books)
+  },
+  deleteBook(id) {
+    this.books = this.books.filter((book) => book.id !== id)
+    view.render(this.books)
+  },
+}
+const view = {
+  init() {
+    const form = document.getElementById('add-book-form')
+    form.addEventListener('submit', function (event) {
+      event.preventDefault()
+      const titleInputElement = document.getElementById('book-title')
+      const authorInputElement = document.getElementById('book-author')
+      const titleText = titleInputElement.value.trim()
+      const authorText = authorInputElement.value.trim()
+      controller.addBook(titleText, authorText)
+      titleInputElement.value = ''
+      authorInputElement.value = ''
+    })
+    const booksList = document.getElementById('books-list')
+    booksList.addEventListener('click', function (event) {
+      if (event.target.className === 'delete-book') {
+        const bookId = parseFloat(event.target.parentNode.id)
+        controller.deleteBook(bookId)
+      }
+    })
+    this.render(model.books)
+  },
+  render(books) {
+    let booksHTML = ''
+    books.forEach((book) => {
+      booksHTML += `<li id="${book.id}">
+      "${book.title}" by ${book.author}
+      <button class="delete-book">Delete</button>
+    </li>`
+    })
+    document.getElementById('books-list').innerHTML = booksHTML
+  },
+}
+const controller = {
+  addBook(title, author) {
+    if (title && author) {
+      XXX
+    }
+  },
+  deleteBook(id) {
+    model.deleteBook(id)
+  },
+}
+document.addEventListener('DOMContentLoaded', () => view.init())
